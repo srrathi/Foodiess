@@ -1,0 +1,90 @@
+.App{
+  min-height: 100vh;
+  background-image: url(./bg.jpeg);
+  background-repeat: none;
+  background-position: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+nav{
+  position: absolute;
+  width: 100%;
+  background-color: #252525;
+  top: 0;
+  margin-top: 0;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+nav div{
+  padding: .5rem;
+}
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.search-bar{
+  margin: 2rem;
+  padding: .5rem;
+  width: 30%;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 5px 10px 30px #252525;
+}
+.search-bar:focus{
+  border: none;
+}
+.search-btn{
+  padding: .5rem 1rem;
+  background-color: #252525;
+  color: white;
+  border: 1px solid white;
+  font-weight: bold;
+  box-shadow: 5px 10px 30px #252525;
+}
+.receipe{
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  color: whitesmoke;
+  width: 40%;
+  height: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 5px 10px 30px #252525;
+}
+.receipe img{
+  justify-items: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  transform: translateX(50%);
+  border-radius: 10px;
+}
+.receipes{
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+.total-results{
+  position: relative;
+  left: 50%;
+  background-color: whitesmoke;
+  width: fit-content;
+  height: fit-content;
+  padding: .2rem .5rem;
+  text-align: center;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 650px) {
+  .search-bar, .search-btn{
+    position: relative;
+    top: 5vh;
+  }
+}
