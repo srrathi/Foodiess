@@ -46,6 +46,7 @@ nav div{
   border: 1px solid white;
   font-weight: bold;
   box-shadow: 5px 10px 30px #252525;
+  cursor: pointer;
 }
 .receipe{
   justify-content: center;
