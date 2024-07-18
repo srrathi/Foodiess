@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 
 const ApiSearch = ({ search, receipes, setReceipe }) => {
 
-    const APP_ID = '1e2165b1';
-    const APP_KEY = '7f7769cf2b6106a93b0a6c9772c4ed96';
+    const APP_ID = process.env.REACT_APP_APP_ID;
+    const APP_KEY = process.env.REACT_APP_APP_KEY;
 
     const getReceipes = async () => {
         const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`);
@@ -11,7 +11,6 @@ const ApiSearch = ({ search, receipes, setReceipe }) => {
         // console.log(data.hits)
         setReceipe(data.hits)
     }
-    console.log(receipes);
     useEffect(() => {
         getReceipes();
     }, [search]);

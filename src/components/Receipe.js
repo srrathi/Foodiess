@@ -5,14 +5,21 @@ const Receipe = ({ receipes }) => {
         <div className="receipes">
             {receipes.map(receipe => (
                 <div className="receipe" key={Math.random()}>
-                    <h1>{receipe.recipe.label}</h1>
-                    <ol>
-                        {receipe.recipe.ingredients.map(ingredient =>(
-                            <li key={Math.random()}>{ingredient.text}</li>
-                        ))}
-                    </ol>
-                    <p>Calories count : {receipe.recipe.calories}</p>
-                    <img src={receipe.recipe.image} alt=""></img>
+                    <div style={{ marginRight: "20px" }}>
+                        <h2>{receipe.recipe.label}</h2>
+                        <div style={{ height: "200px", width: "200px", minWidth: "200px", position: "relative", objectFit: "contain" }}>
+                            <img src={receipe.recipe.image} alt=""></img>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Steps: </p>
+                        <ul>
+                            {receipe.recipe.ingredients.map(ingredient => (
+                                <li key={Math.random()}>{ingredient.text}</li>
+                            ))}
+                        </ul>
+                        <p>Calories count : {Math.round(receipe.recipe.calories * 100) / 100}</p>
+                    </div>
                 </div>
             ))}
         </div>
